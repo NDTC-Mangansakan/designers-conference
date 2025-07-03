@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary:#5347d9;
+  --color-secondary:#e95500;
+  --color-main-bg: #080713;
+  --color-secondary-bg: #1d1b37;
+  --color-pricing-bg:#a198ff;
+}
+
+html{
+  scroll-padding-top: 10vh;
+  scroll-behavior: smooth;
+}
+
+body{
+  @apply bg-main-bg text-white font-sans overflow-x-hidden;
+}
+
+@utility nav-link{
+  @apply font-semibold transition-colors duration-200 text-white/70 hover:text-white;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.4 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
