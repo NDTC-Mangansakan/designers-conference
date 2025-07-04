@@ -52,12 +52,12 @@ const App = () => {
   }, []);
 
 
-  if(isLoading){
-    return <Loader/>
+  if (isLoading) {
+    return <Loader />
   }
 
   return (
-    <>
+    <div className={`transition-opacity duration-700 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
       <Navbar />
       <Home />
       <About />
@@ -67,7 +67,7 @@ const App = () => {
       <Testimonials />
       <Faqs />
       <Footer />
-    </>
+    </div>
   )
 }
 
