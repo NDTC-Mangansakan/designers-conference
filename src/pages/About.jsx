@@ -12,6 +12,7 @@ import { useEffect } from 'react'
 const About = () => {
 
     useEffect(() => {
+
         sr.reveal('.about-img', {origin: 'left'})
         sr.reveal('.about-content', {interval: '300', delay: 300})
     }, [])
