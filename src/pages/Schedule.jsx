@@ -91,12 +91,12 @@ const Schedule = () => {
 
                         {/* Buttons */}
                         <div className="flex flex-col gap-y-3">
-                            <div className={`${toggleButton ? 'bg-secondary' : 'bg-main-bg'} px-5 py-3 rounded-lg cursor-pointer`} onClick={() => setToggleButton(prev => !prev)}>
+                            <div className={`${toggleButton ? 'bg-secondary' : 'bg-main-bg'} px-5 py-3 rounded-lg cursor-pointer`} onClick={() => setToggleButton(prev => !toggleButton && !prev)}>
                                 <p className='text-white font-bold text-xl'>Day 1</p>
                                 <p className='text-white/90 text-sm'>Friday, 20th October</p>
                             </div>
 
-                            <div className={`${!toggleButton ? 'bg-secondary' : 'bg-main-bg'} p-5 rounded-lg cursor-pointer`} onClick={() => setToggleButton(prev => !prev)}>
+                            <div className={`${!toggleButton ? 'bg-secondary' : 'bg-main-bg'} p-5 rounded-lg cursor-pointer`} onClick={() => setToggleButton(prev => toggleButton && !prev)}>
                                 <p className='text-white font-bold text-xl'>Day 2</p>
                                 <p className='text-white/90 text-sm'>Friday, 21st October</p>
                             </div>
@@ -121,7 +121,7 @@ const Schedule = () => {
                                     scheduleTwoData.map((item, index) => (
                                         <div key={index} className="flex flex-col gap-1 lg:flex-row ">
                                             <p className="text-white/90 lg:w-1/3 pt-3 pl-5">{item.time}</p>
-                                            <div className="mt-3 border-l-4 border-speakers-bg pl-5 lg:w-2/3">
+                                            <div className="mt-3 border-l-2  border-secondary-bg pl-5 lg:w-2/3">
                                                 <p className="font-bold text-2xl">{item.title}</p>
                                                 <p className="mt-3">{item.description}</p>
                                             </div>
