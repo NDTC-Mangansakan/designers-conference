@@ -40,7 +40,7 @@ const App = () => {
       const img = new Image();
       img.src = src;
       img.onload = handleLoad;
-      img.onerror = handleLoad; // Still count even if failed (optional)
+      //img.onerror = handleLoad; // Still count even if failed (optional)
     });
 
     function handleLoad() {
