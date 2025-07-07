@@ -25,8 +25,8 @@ const Faqs = () => {
 
                 <div className="mt-20 grid grid-cols-1 gap-15 md:grid-cols-2">
                     {
-                        questions.map((question) => (
-                            <div className="question flex gap-3">
+                        questions.map((question, index) => (
+                            <div key={index} className="question flex gap-3">
                                 <span>
                                     <RiQuestionLine size={40} />
                                 </span>
