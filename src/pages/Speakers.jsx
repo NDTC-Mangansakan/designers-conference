@@ -29,7 +29,7 @@ const speakers = [
 const Speakers = () => {
     return (
         <section id="speakers" className="bg-secondary-bg py-15 rounded-2xl lg:bg-transparent">
-            <div className="container relative mx-auto px-5 lg:py-20">
+            <div className="container relative mx-auto max-w-[1280px] px-5 lg:py-20">
                 <div className="lg:flex">
                     {/* Swiper */}
                     <div className="speakers-swiper mt-10 relative lg:w-3/5 lg:mt-0">

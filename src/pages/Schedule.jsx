@@ -48,7 +48,7 @@ const Schedule = () => {
 
     return (
         <section id="schedule" className="py-15">
-            <div className="container mx-auto px-5">
+            <div className="container mx-auto max-w-[1280px]     px-5">
                 <p className="text-primary font-semibold text-xl">Schedule</p>
 
                 <div className="flex flex-col gap-10 lg:flex-row lg:items-start">

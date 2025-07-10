@@ -64,7 +64,7 @@ const Navbar = () => {
     return (
         <>
             <nav className='h-[10vh] fixed top-0 left-0 right-0 flex items-center z-99'>
-                <div className="container mx-auto px-5 flex items-center justify-between z-99">
+                <div className="container mx-auto max-w-[1280px] px-5 flex items-center justify-between z-99">
                     <div className="font-bold text-2xl">
                         <a href="#">Assan</a>
                     </div>

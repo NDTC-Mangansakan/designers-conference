@@ -39,7 +39,7 @@ const Pricing = () => {
 
     return (
         <section id="pricing" className="py-15 bg-secondary-bg">
-            <div className="container mx-auto px-5">
+            <div className="container mx-auto max-w-[1280px] px-5">
                 <p className="text-xl text-center">Event Pricing</p>
                 <p className="mt-3 font-extrabold text-[clamp(25px,3.5vw,100px)] text-center">Book your seat now</p>
 

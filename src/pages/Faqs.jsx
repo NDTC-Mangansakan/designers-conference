@@ -20,7 +20,7 @@ const Faqs = () => {
 
     return (
         <div id='faqs' className='py-15 bg-linear-to-tl from-primary to-secondary'>
-            <div className="container mx-auto px-5">
+            <div className="container mx-auto max-w-[1280px] px-5">
                 <p className="text-center font-bold text-[clamp(30px,3.5vw,100px)]">Frequently asked questions</p>
 
                 <div className="mt-20 grid grid-cols-1 gap-15 md:grid-cols-2">
