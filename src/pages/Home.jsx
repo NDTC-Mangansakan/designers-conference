@@ -1,7 +1,7 @@
 import { RiPlayLine } from '@remixicon/react';
 import sr from '../components/ScrolReveal';
 import { useEffect } from 'react';
-import homeImg from '../assets/Images/home-bg.jpg';
+import homeImg from '../assets/Images/home-new-bg.webp';
 
 const Home = () => {
     useEffect(() => {

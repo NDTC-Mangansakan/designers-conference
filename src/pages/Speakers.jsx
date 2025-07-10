@@ -10,12 +10,12 @@ import {
     RiTwitterXFill,
 } from '@remixicon/react';
 
-import img1 from '../assets/Images/speakers-img-1.jpg';
-import img2 from '../assets/Images/speakers-img-2.jpg';
-import img3 from '../assets/Images/speakers-img-3.jpg';
-import img4 from '../assets/Images/speakers-img-4.jpg';
-import img5 from '../assets/Images/speakers-img-5.jpg';
-import img6 from '../assets/Images/speakers-img-6.jpg';
+import img1 from '../assets/Images/speakers-new-img-1.webp';
+import img2 from '../assets/Images/speakers-new-img-2.webp';
+import img3 from '../assets/Images/speakers-new-img-3.webp';
+import img4 from '../assets/Images/speakers-new-img-4.webp';
+import img5 from '../assets/Images/speakers-new-img-5.webp';
+import img6 from '../assets/Images/speakers-new-img-6.webp';
 
 const speakers = [
     { name: 'Speaker Sharma', title: 'Web Designer', img: img1 },

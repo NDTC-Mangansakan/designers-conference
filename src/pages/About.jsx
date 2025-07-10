@@ -2,7 +2,7 @@ import { RiPlayLine } from '@remixicon/react';
 import sr from '../components/ScrolReveal';
 import { useEffect } from 'react';
 
-import aboutImg from '../assets/Images/about-img.jpg';
+import aboutImg from '../assets/Images/about-new-img.webp';
 import amazonLogo from '../assets/Images/Amazon_logo.svg';
 import grabLogo from '../assets/Images/Grab_logo.svg';
 import spotifyLogo from '../assets/Images/Spotify_logo_with_text.svg.png';
