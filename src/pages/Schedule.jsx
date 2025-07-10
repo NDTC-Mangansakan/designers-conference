@@ -59,6 +59,7 @@ const Schedule = () => {
                         <div className="flex flex-col gap-y-3">
                             <button
                                 onClick={() => setActiveDay('day1')}
+                                aria-label='Access Day 1 Schedule'
                                 aria-pressed={activeDay === 'day1'}
                                 className={`px-5 py-3 rounded-lg text-left transition-colors duration-200 ${activeDay === 'day1' ? 'bg-secondary' : 'bg-main-bg'
                                     }`}
@@ -69,6 +70,7 @@ const Schedule = () => {
 
                             <button
                                 onClick={() => setActiveDay('day2')}
+                                aria-label='Access Day 1 Schedule'
                                 aria-pressed={activeDay === 'day2'}
                                 className={`px-5 py-3 rounded-lg text-left transition-colors duration-200 ${activeDay === 'day2' ? 'bg-secondary' : 'bg-main-bg'
                                     }`}

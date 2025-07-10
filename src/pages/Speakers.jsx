@@ -71,10 +71,10 @@ const Speakers = () => {
 
                         {/* Custom Nav */}
                         <div className="absolute bottom-4 right-4 flex gap-2 z-10">
-                            <button className="custom-prev bg-amber-100 text-black p-2 rounded-full hover:bg-amber-50">
+                            <button className="custom-prev bg-amber-100 text-black p-2 rounded-full hover:bg-amber-50" aria-label='Access Previous Speaker'>
                                 <RiArrowLeftSLine size={24} />
                             </button>
-                            <button className="custom-next bg-amber-100 text-black p-2 rounded-full hover:bg-amber-50">
+                            <button className="custom-next bg-amber-100 text-black p-2 rounded-full hover:bg-amber-50" aria-label='Access Next Speaker'>
                                 <RiArrowRightSLine size={24} />
                             </button>
                         </div>

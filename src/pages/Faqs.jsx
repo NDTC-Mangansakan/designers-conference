@@ -41,7 +41,7 @@ const Faqs = () => {
 
                 <p className="mt-20 text-center">Didn't Get your asswer? </p>
                 <p className="text-center">Don't worry, Send us an email here
-                    <span className='cursor-pointer font-semibold text-white/70 hover:text-white/100 transition-colors duration-200'> event@maildomain.com</span>
+                    <a href='email' aria-label='Access Page Email' className='cursor-pointer font-semibold text-white/70 hover:text-white/100 transition-colors duration-200'> event@maildomain.com</a>
                 </p>
             </div>
         </div>

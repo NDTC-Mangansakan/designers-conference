@@ -16,11 +16,11 @@ const Footer = () => {
                     <div>
                         <p className="text-xl font-semibold">Need Info?</p>
                         <div className="mt-5 flex flex-col items-start gap-y-2">
-                            <a href="#" className='hover:text-secondary transition-colors duration-200'>Contact Us</a>
-                            <a href="#" className='hover:text-secondary transition-colors duration-200'>Press and Media</a>
-                            <a href="#" className='hover:text-secondary transition-colors duration-200'>Legal Notice</a>
-                            <a href="#" className='hover:text-secondary transition-colors duration-200'>Terms</a>
-                            <a href="#" className='hover:text-secondary transition-colors duration-200'>Our Policy</a>
+                            <a href="#" aria-label='Contact Us for more' className='hover:text-secondary transition-colors duration-200'>Contact Us</a>
+                            <a href="#" aria-label='Social Media Shenaniganns' className='hover:text-secondary transition-colors duration-200'>Press and Media</a>
+                            <a href="#" aria-label='Policy type shi' className='hover:text-secondary transition-colors duration-200'>Legal Notice</a>
+                            <a href="#" aria-label='Terms and Conditions' className='hover:text-secondary transition-colors duration-200'>Terms</a>
+                            <a href="#" aria-label='Our Complete Policy' className='hover:text-secondary transition-colors duration-200'>Our Policy</a>
                         </div>
                     </div>
 
@@ -29,21 +29,21 @@ const Footer = () => {
                         <p className="text-xl font-semibold">Get Notification</p>
                         <div className='mt-5 flex flex-col'>
                             <input type="email" placeholder='Enter Email' className='border px-5 py-3 w-full outline-0' />
-                            <button className='mt-2 bg-secondary w-full py-3 rounded cursor-pointer hover:bg-secondary/70 transition-colors duration-200'>Subscribe</button>
+                            <button className='mt-2 bg-secondary w-full py-3 rounded cursor-pointer hover:bg-secondary/70 transition-colors duration-200' aria-label='Subscribe to be part of our amily'>Subscribe</button>
                             <div className="mt-10 flex items-center gap-x-5">
-                                <a href="#" className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
+                                <a href="#" aria-label='Access facebook account' className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
                                     <RiFacebookCircleFill />
                                 </a>
 
-                                <a href="#" className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
+                                <a href="#" aria-label='Access twitter account' className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
                                     <RiTwitterXFill />
                                 </a>
 
-                                <a href="#" className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
+                                <a href="#" aria-label='Access instagram account' className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
                                     <RiInstagramLine />
                                 </a>
 
-                                <a href="#" className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
+                                <a href="#" aria-label='Access linkedIn account' className='p-2 border border-gray-400 rounded-full hover:bg-gray-100/10'>
                                     <RiLinkedinBoxFill />
                                 </a>
                             </div>

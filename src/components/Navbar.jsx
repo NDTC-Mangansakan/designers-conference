@@ -76,6 +76,7 @@ const Navbar = () => {
                                 <a
                                     key={item.href}
                                     href={item.href}
+                                    aria-label={`Access the ${item.name} page`}
                                     className={clsx("nav-link transition-colors", {
                                         "text-white": activeSection === item.href,
                                         "text-gray-400": activeSection !== item.href
@@ -86,7 +87,7 @@ const Navbar = () => {
                             ))}
                         </div>
 
-                        <a href="#book-now" className='px-5 py-3 rounded-lg bg-primary font-semibold'>Book Now</a>
+                        <a href="#book-now" className='px-5 py-3 rounded-lg bg-primary font-semibold' aria-label='Book now to attend the seminar'>Book Now</a>
 
                         {/* Mobile Toggle */}
                         <button
@@ -133,6 +134,7 @@ const Navbar = () => {
                         <a
                             key={item.href}
                             href={item.href}
+                            aria-label={`Access the ${item.name} page`}
                             className={clsx("nav-link transition-colors", {
                                 "text-white": activeSection === item.href,
                                 "text-gray-400": activeSection !== item.href

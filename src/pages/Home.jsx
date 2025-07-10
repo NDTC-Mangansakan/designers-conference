@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
 
                 <div className="home-btns flex items-center justify-center gap-x-5 mt-10">
-                    <a href="#pricing" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:shadow-lg hover:shadow-white transition-all duration-200">
+                    <a href="#pricing" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:shadow-lg hover:shadow-white transition-all duration-200" aria-label='Access the pricing page'>
                         Participate
                     </a>
                     <a href="#learn-more" className="px-5 py-3 rounded-lg bg-secondary text-white font-semibold inline-flex items-center gap-2 hover:shadow-lg hover:shadow-secondary transition-all duration-200" aria-label="Watch teaser video">

@@ -72,7 +72,7 @@ const Pricing = () => {
                                 })}
                             </ul>
 
-                            <button className="mt-5 w-full bg-secondary font-semibold text-white py-3 rounded-lg hover:bg-secondary/80 transition-colors duration-200">
+                            <button className="mt-5 w-full bg-secondary font-semibold text-white py-3 rounded-lg hover:bg-secondary/80 transition-colors duration-200" aria-label={`Get ${plan} ticket`}>
                                 Get Ticket
                             </button>
                         </div>

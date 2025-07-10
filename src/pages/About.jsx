@@ -25,7 +25,7 @@ const About = () => {
 
     return (
         <section id="about" className="py-15">
-            <div className="container mx-auto p-5 max-w-7xl flex flex-col gap-10 lg:flex-row">
+            <div className="container mx-auto p-5    flex flex-col gap-10 lg:flex-row">
                 <div className="flex items-center justify-center lg:w-1/2">
                     <img src={aboutImg} alt="People at a design conference" className="about-img object-cover rounded-lg" />
                 </div>
