@@ -81,9 +81,9 @@ const Speakers = () => {
                     </div>
 
                     {/* Text Content (Desktop only) */}
-                    <div className="z-10 hidden w-2/5 lg:flex flex-col justify-center items-start gap-5 lg:pl-10">
+                    <div className="z-10 mt-10 lg:flex flex-col justify-center items-start gap-5 lg:mt-0 lg:pl-10">
                         <p className="font-semibold text-secondary text-xl">Speakers</p>
-                        <p className="font-extrabold text-3xl">Meet the incredible speakers</p>
+                        <p className="font-extrabold text-2xl lg:text-3xl">Meet the incredible speakers</p>
                     </div>
 
                     {/* Background overlay */}
