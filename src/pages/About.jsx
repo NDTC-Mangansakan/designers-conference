@@ -27,7 +27,7 @@ const About = () => {
         <section id="about" className="py-15">
             <div className="container max-w-7xl mx-auto p-5    flex flex-col gap-10 lg:flex-row">
                 <div className="flex items-center justify-center lg:w-1/2">
-                    <img src={aboutImg} alt="People at a design conference" className="about-img object-cover rounded-lg" />
+                    <img src={aboutImg} alt="People at a design conference" className="about-img object-cover w-60 rounded-lg sm:w-80 lg:w-100" />
                 </div>
 
                 <article className="about-group flex flex-col justify-center items-start lg:w-1/2">
