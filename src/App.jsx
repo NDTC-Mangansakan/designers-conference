@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import gsap, { ScrollTrigger } from 'gsap/all'
+
 
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
@@ -10,6 +12,8 @@ import Testimonials from './pages/Testimonials'
 import Faqs from './pages/Faqs'
 import Footer from './pages/Footer'
 import Loader from './components/Loader'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const projectImages = [
   './assets/Images/home-bg.jpg',

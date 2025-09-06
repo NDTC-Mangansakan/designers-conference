@@ -1,6 +1,4 @@
 import { RiPlayLine } from '@remixicon/react';
-import sr from '../components/ScrolReveal';
-import { useEffect } from 'react';
 
 import aboutImg from '../assets/Images/about-new-img.webp';
 import amazonLogo from '../assets/Images/Amazon_logo.svg';
@@ -8,6 +6,8 @@ import grabLogo from '../assets/Images/Grab_logo.svg';
 import spotifyLogo from '../assets/Images/Spotify_logo_with_text.svg.png';
 import googleLogo from '../assets/Images/Google_logo.svg';
 import nasdaqLogo from '../assets/Images/NASDAQ_Logo.svg';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap/all';
 
 const sponsors = [
     { src: amazonLogo, alt: 'Amazon logo', width: 'w-40' },
@@ -18,14 +18,25 @@ const sponsors = [
 ];
 
 const About = () => {
-    useEffect(() => {
-        sr.reveal('.about-img', { origin: 'left' });
-        sr.reveal('.about-group > *', { interval: 300, delay: 300 });
-    }, []);
+
+    useGSAP(() => {
+        gsap.from('.about-container', {
+            scrollTrigger: {
+                trigger: '#about',
+                start: 'top 80%',
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            delay: 0.3,
+            ease: 'power4.out',
+        })
+    }, [])
+   
 
     return (
         <section id="about" className="py-15">
-            <div className="container max-w-7xl mx-auto p-5    flex flex-col gap-10 lg:flex-row">
+            <div className="about-container container max-w-7xl mx-auto p-5    flex flex-col gap-10 lg:flex-row">
                 <div className="flex items-center justify-center lg:w-1/2">
                     <img src={aboutImg} alt="People at a design conference" className="about-img object-cover w-60 rounded-lg sm:w-80 lg:w-100" />
                 </div>

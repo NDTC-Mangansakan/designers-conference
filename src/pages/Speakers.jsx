@@ -10,6 +10,9 @@ import {
     RiTwitterXFill,
 } from '@remixicon/react';
 
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap/all';
+
 import img1 from '../assets/Images/speakers-new-img-1.webp';
 import img2 from '../assets/Images/speakers-new-img-2.webp';
 import img3 from '../assets/Images/speakers-new-img-3.webp';
@@ -27,9 +30,25 @@ const speakers = [
 ];
 
 const Speakers = () => {
+
+    useGSAP(() => {
+        gsap.from('.speakers-container', {
+            scrollTrigger: {
+                trigger: '#speakers',
+                start: 'top 80%',
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            delay: 0.3,
+            ease: 'power4.out',
+        })
+    }, [])
+
+    
     return (
         <section id="speakers" className="bg-secondary-bg py-15 rounded-2xl lg:bg-transparent">
-            <div className="container relative mx-auto max-w-[1280px] px-5 lg:py-20">
+            <div className="speakers-container container relative mx-auto max-w-[1280px] px-5 lg:py-20">
                 <div className="lg:flex">
                     {/* Swiper */}
                     <div className="speakers-swiper mt-10 relative lg:w-3/5 lg:mt-0">

@@ -1,11 +1,21 @@
 import { RiQuestionLine } from '@remixicon/react'
-import sr from '../components/ScrolReveal'
-import { useEffect } from 'react'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap/all';
 
 const Faqs = () => {
 
-    useEffect(() => {
-        sr.reveal('.question', {interval: 300})
+    useGSAP(() => {
+        gsap.from('.faqs-container', {
+            scrollTrigger: {
+                trigger: '#faqs',
+                start: 'top 80%',
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            delay: 0.3,
+            ease: 'power4.out',
+        })
     }, [])
 
     const desc = 'Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet. '
@@ -20,7 +30,7 @@ const Faqs = () => {
 
     return (
         <div id='faqs' className='py-15 bg-linear-to-tl from-primary to-secondary'>
-            <div className="container mx-auto max-w-[1280px] px-5">
+            <div className="faqs-container container mx-auto max-w-[1280px] px-5">
                 <p className="text-center font-bold text-[clamp(30px,3.5vw,100px)]">Frequently asked questions</p>
 
                 <div className="mt-20 grid grid-cols-1 gap-15 md:grid-cols-2">

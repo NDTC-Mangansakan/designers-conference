@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
 import { RiCheckboxCircleLine } from '@remixicon/react';
-import sr from '../components/ScrolReveal';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap/all';
 
 const plans = [
     {
@@ -29,17 +29,24 @@ const allFeatures = [
 ];
 
 const Pricing = () => {
-    useEffect(() => {
-        sr.reveal('.price-card', { interval: 300 });
-
-        return () => {
-            sr.clean('.price-card');
-        };
-    }, []);
+    
+    useGSAP(() => {
+        gsap.from('.pricing-container', {
+            scrollTrigger: {
+                trigger: '#pricing',
+                start: 'top 80%',
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            delay: 0.3,
+            ease: 'power4.out',
+        })
+    }, [])
 
     return (
         <section id="pricing" className="py-15 bg-secondary-bg">
-            <div className="container mx-auto max-w-[1280px] px-5">
+            <div className="pricing-container container mx-auto max-w-[1280px] px-5">
                 <p className="text-xl text-center">Event Pricing</p>
                 <p className="mt-3 font-extrabold text-[clamp(25px,3.5vw,100px)] text-center">Book your seat now</p>
 

@@ -1,14 +1,27 @@
 import { RiPlayLine } from '@remixicon/react';
-import sr from '../components/ScrolReveal';
-import { useEffect } from 'react';
 import homeImg from '../assets/Images/home-new-bg.webp';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap/all';
 
 const Home = () => {
-    useEffect(() => {
-        sr.reveal('.home-text-group > *', { interval: 300 });
-        sr.reveal('.home-btns', { delay: 1200 });
-    }, []);
+    
+    useGSAP(() => {
+        gsap.from('.home-text-group', {
+            y:50,
+            opacity:0,
+            duration:1,
+            ease:'power4.out',
+            delay:.3
+        })
 
+        gsap.from('.home-btns', {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: 'power4.out',
+            delay: .6
+        })
+    })
     return (
         <section id='home' className="py-[20vh] relative bg-gray-600 bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${homeImg})` }}>
             <div className="text-center relative z-10">

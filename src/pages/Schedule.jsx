@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import sr from '../components/ScrolReveal';
+import React, {  useState } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap/all';
 
 // Reusable component
 const ScheduleItem = ({ time, title, description, className = '' }) => (
@@ -15,15 +16,21 @@ const ScheduleItem = ({ time, title, description, className = '' }) => (
 const Schedule = () => {
     const [activeDay, setActiveDay] = useState('day1');
 
-    useEffect(() => {
-        sr.reveal('.sched-part-1', { origin: 'left' });
-        sr.reveal('.sched-part-2', { origin: 'right', interval: 200, delay: 300 });
 
-        return () => {
-            sr.clean('.sched-part-1');
-            sr.clean('.sched-part-2');
-        };
-    }, []);
+
+    useGSAP(() => {
+        gsap.from('.schedule-container', {
+            scrollTrigger: {
+                trigger: '#schedule',
+                start: 'top 80%',
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            delay: 0.3,
+            ease: 'power4.out',
+        })
+    }, [])
 
     const schedules = {
         day1: [
@@ -48,7 +55,7 @@ const Schedule = () => {
 
     return (
         <section id="schedule" className="py-15">
-            <div className="container mx-auto max-w-[1280px]     px-5">
+            <div className="schedule-container container mx-auto max-w-[1280px]     px-5">
                 <p className="text-primary font-semibold text-xl">Schedule</p>
 
                 <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
